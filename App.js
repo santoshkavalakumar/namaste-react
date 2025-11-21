@@ -1,48 +1,16 @@
-// const heading = React.createElement(
-//     'h1', 
-//     {id: 'heading'},
-//      'Hello Namaste React!'
-// );
-// console.log(heading); // object
+import React from "react";
+import ReactDOM from "react-dom/client";
 
-/**
- * 
- * 
- * <div id="parent">
- *       <div id="child">
- *          <h1>I'm a h1 tag</h1>
- *          <h2>I'm a h2 tag</h2>
- *       </div>
- *       <div id="child">
- *          <h1>I'm a h1 tag</h1>
- *          <h2>I'm a h2 tag</h2>
- *       </div>
- * </div>
+// Jsx (transpiled before it reaches the JS) - PARCEL - Babel - JS
 
- * 
+const Header = () => <h1 className="header"> Namaste React 🚀 </h1>;
 
- * 
- * 
- * 
- * 
- * **/
-const parent = React.createElement('div', { id: 'parent' },
-    [React.createElement('div', { id: 'child' },
-        [React.createElement('h1', {}, "I'm a h1 tag"),
-        React.createElement('h2', {}, "I'm a h2 tag")
-        ]
-    ),
-    React.createElement('div', { id: 'child2' },
-        [React.createElement('h1', {}, "I'm a h1 tag"),
-        React.createElement('h2', {}, "I'm a h2 tag")
-        ]
-    )]);
+const HeaderComponent = () => (
+  <div id="container">
+    <Header />
+    JSX component and function
+  </div>
+);
 
-console.log(parent);
-
-
-
-
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(parent);
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<HeaderComponent />);
